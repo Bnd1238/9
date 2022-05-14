@@ -25,3 +25,4 @@ double CountryHouse::nalog()
 {
 	return worth*1.0/500;
 }
+
