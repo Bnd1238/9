@@ -13,7 +13,7 @@ public:
 	{
 		cout << "open P " << this << endl;
 	}
-	~Property() 
+	virtual ~Property()
 	{
 		cout << "close P " << this << endl;
 
@@ -40,14 +40,13 @@ public:
 class Car : public Property
 {
 public:
-	Car(int w=0) :Property{ w }
+	Car(int w=0) :Property(w)
 	{
 		cout << "open C " << this << endl;
 	}
 	~Car()
 	{
 		cout << "close C " << this << endl;
-		delete this;
 	}
 	double nalog()override;
 };
@@ -61,7 +60,6 @@ public:
 	~CountryHouse()
 	{
 		cout << "close H " << this << endl;
-		
 	}
 	double nalog()override;
 };
