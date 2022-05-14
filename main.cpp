@@ -12,16 +12,16 @@ int main()
 	CountryHouse d(w);
 	d.print();*/
 	Property* mas [7];
-	Apartament o,d,t;
+	/*Apartament o,d,t;
 	Car c, p;
-	CountryHouse sh, sm;
-	mas[0] = &o;
-	mas[1] = &d;
-	mas[2] = &t;
-	mas[3] = &c;
-	mas[4] = &p;
-	mas[5] = &sh;
-	mas[6] = &sm;
+	new CountryHouse sh, sm;*/
+	mas[0] = new Apartament;
+	mas[1] = new Apartament;
+	mas[2] = new Apartament;
+	mas[3] = new Car;
+	mas[4] = new Car;
+	mas[5] = new CountryHouse;
+	mas[6] = new CountryHouse;
 	for (int i = 0; i < 7; ++i)
 	{
 		/*int k;
@@ -32,6 +32,7 @@ int main()
 	for (int i = 0; i < 7; ++i)
 	{
 		cout<<i<<" "<<mas[i]->GetWorth()<<" "<<mas[i]->nalog()<<endl;
+		delete mas[i];
 	}
 	
 }
